@@ -35,7 +35,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: python3 -m pip install pytest pyyaml
-      - run: python3 -m pytest ci/bench/tests -q
+      - run: python3 -m pytest ci/bench/tests ci/k8s/client/test_p2p_mtp.py -q
 
   test:
     name: Test Suite
